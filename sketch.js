@@ -6,12 +6,12 @@ const Constraint = Matter.Constraint;
 var engine, world;
 var box1, box2,box3, box4, box5,box6,box7,box8;
 var backgroundImg,platform;
-var bird, slingshot, ground1;
+var bird,sling, slingshot, ground1, slingshot1;
 var polygon,polygon_img;
 
 var gameState = "onSling";
 var bg = "sprites/bg1.png";
-var score = 0;
+var score = 0;  
 
 function preload() {
 
@@ -35,7 +35,8 @@ function setup(){
     box7 = new Box(645,325,20,40);
     box8 = new Box(665,325,20,40);
 
-    polygon = new Polygon(150,150,5);
+    polygon = new Polygon(150,150,15);
+    slingshot1 = new SlingShot(polygon,{x:525, y:325});
 
     
     
@@ -57,6 +58,7 @@ function draw(){
     box7.display();
     box8.display();
     polygon.display();
+    slingshot.display();    
 
 drawSprites();
 
